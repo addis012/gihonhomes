@@ -66,10 +66,10 @@
             text-transform: uppercase;
         }
 
-        /* --- HERO SECTION --- */
+        /* --- UPDATED HERO SECTION (NO TINT) --- */
         .hero {
-            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), 
-                        url('photo_2026-04-25_14-27-36.webp');
+            /* Overlay removed to make hero image fully visible */
+            background-image: url('photo_2026-04-25_14-27-36.webp');
             background-size: cover;
             background-position: center;
             color: var(--white);
@@ -77,8 +77,20 @@
             text-align: center;
         }
 
-        .hero h1 { font-size: 3.5rem; margin: 0 0 10px; font-weight: 800; }
-        .hero p { font-size: 1.5rem; margin: 0; opacity: 0.9; }
+        /* Text shadow added to ensure readability against bright images */
+        .hero h1 { 
+            font-size: 3.5rem; 
+            margin: 0 0 10px; 
+            font-weight: 800;
+            text-shadow: 2px 2px 8px rgba(0,0,0,0.7);
+        }
+        .hero p { 
+            font-size: 1.5rem; 
+            margin: 0; 
+            opacity: 1; 
+            font-weight: 600;
+            text-shadow: 1px 1px 5px rgba(0,0,0,0.7);
+        }
 
         /* --- CALL TO ACTION BAR --- */
         .contact-bar { 
