@@ -17,45 +17,94 @@
         :root {
             --primary: #1a1f3c; /* Dark Navy from logo */
             --accent: #e63946;  /* Vibrant Red from logo */
+            --whatsapp: #25D366; /* WhatsApp Green */
             --white: #ffffff;
             --gray: #f8f9fa;
         }
         body {
             font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
             margin: 0;
+            padding-top: 70px; /* Space for sticky header */
             line-height: 1.6;
             color: #333;
             background-color: var(--gray);
         }
-        header {
+
+        /* --- STICKY TOP BAR --- */
+        .header-bar {
+            position: fixed;
+            top: 0;
+            width: 100%;
             background: var(--primary);
-            color: var(--white);
-            padding: 1.5rem;
-            text-align: center;
-            border-bottom: 4px solid var(--accent);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+            box-sizing: border-box;
+            z-index: 1000;
+            border-bottom: 3px solid var(--accent);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.2);
         }
+        .header-logo {
+            height: 45px;
+            display: block;
+        }
+        .header-call-btn {
+            background: var(--accent);
+            color: var(--white);
+            padding: 10px 20px;
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 5px;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+        }
+
         .hero {
             background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=1200&q=80');
             background-size: cover;
             background-position: center;
             color: var(--white);
-            padding: 100px 20px;
+            padding: 80px 20px;
             text-align: center;
         }
         .hero h1 { font-size: 3rem; margin-bottom: 1rem; }
         .hero p { font-size: 1.5rem; margin-bottom: 2rem; }
+        
+        /* --- CONTACT SECTION & BUTTONS --- */
+        .contact-bar { 
+            background: var(--white); 
+            padding: 40px; 
+            border-radius: 10px; 
+            text-align: center; 
+            margin-top: -50px; 
+            position: relative; 
+            z-index: 10; 
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1); 
+        }
+        .btn-group {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            flex-wrap: wrap;
+            margin-top: 20px;
+        }
         .btn {
-            background: var(--accent);
-            color: var(--white);
-            padding: 15px 40px;
+            padding: 15px 30px;
             text-decoration: none;
             font-weight: bold;
             border-radius: 30px;
-            font-size: 1.2rem;
+            font-size: 1.1rem;
             transition: 0.3s;
+            display: inline-flex;
+            align-items: center;
+            color: white;
         }
-        .btn:hover { background: #b02a33; }
-        
+        .btn-red { background: var(--accent); }
+        .btn-red:hover { background: #b02a33; }
+        .btn-whatsapp { background: var(--whatsapp); }
+        .btn-whatsapp:hover { background: #1da851; }
+
         .container { max-width: 1200px; margin: auto; padding: 50px 20px; }
         .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; }
         
@@ -76,33 +125,39 @@
             margin-top: 30px;
         }
         .amenity-item { padding: 15px; background: rgba(255,255,255,0.1); border-radius: 8px; }
-
-        .contact-bar { background: var(--white); padding: 40px; border-radius: 10px; text-align: center; margin-top: -50px; position: relative; z-index: 10; box-shadow: 0 10px 30px rgba(0,0,0,0.1); }
-        .phone-number { font-size: 2rem; color: var(--accent); font-weight: bold; margin: 15px 0; display: block; }
         
         footer { background: #111; color: #888; text-align: center; padding: 20px; font-size: 0.9rem; }
+
+        @media (max-width: 600px) {
+            .hero h1 { font-size: 2rem; }
+            .header-call-btn { padding: 8px 12px; font-size: 0.8rem; }
+        }
     </style>
 </head>
 <body>
 
-<header>
-    <h1>Ghion Homes Real Estate</h1>
+<header class="header-bar">
+    <img src="logo.png" alt="Ghion Homes Logo" class="header-logo">
+    <a href="tel:0969098514" class="header-call-btn">📞 Call for Site Visit</a>
 </header>
 
 <section class="hero">
     <div class="container">
         <h1>Exclusive Living in Bole Wollo Sefer</h1>
         <p>The only 20,000 sqm compound in Bole. Modern design meets high-end quality.</p>
-        <a href="tel:0969098514" class="btn">Call for Viewing: 0969098514</a>
     </div>
 </section>
 
 <div class="container">
     <div class="contact-bar">
-        <h2>Book Your Site Visit Today</h2>
-        <p>Start your ownership with only a 10% down payment.</p>
-        <a href="tel:0969098514" class="phone-number">☎ 0969098514</a>
-        <p>Location: Bole Wollo Sefer, Addis Ababa</p>
+        <h2>Start Your Ownership Today</h2>
+        <p>Secure your dream home with only a 10% down payment.</p>
+        
+        <div class="btn-group">
+            <a href="tel:0969098514" class="btn btn-red">☎ Call 0969098514</a>
+            <a href="https://wa.me/251969098514" class="btn btn-whatsapp">💬 WhatsApp Us</a>
+        </div>
+        <p style="margin-top: 15px;">Location: Bole Wollo Sefer, Addis Ababa</p>
     </div>
 
     <center><h2 style="font-size: 2.5rem; color: var(--primary); margin: 60px 0 30px;">Available Property Options</h2></center>
