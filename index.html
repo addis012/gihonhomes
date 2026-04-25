@@ -5,15 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <title>Ghion Homes Real Estate | Luxury Apartments in Bole Wollo Sefer</title>
-    <meta name="description" content="Ghion Homes Real Estate offers premium apartments in Bole Wollo Sefer, Addis Ababa. Only 10% down payment for luxury living in a 20,000 sqm compound.">
-    <meta name="keywords" content="Ghion Homes Real Estate, Ghion Homes, Ghion Real Estate, Apartments for sale in Addis Ababa, Real Estate Ethiopia, Bole Wollo Sefer Apartments, Luxury Homes Addis Ababa">
+    <meta name="description" content="Discover luxury living with Ghion Homes Real Estate. Premium apartments in Bole Wollo Sefer, Addis Ababa with 10% down payment and world-class amenities.">
+    <meta name="keywords" content="Ghion Homes Real Estate, Ghion Homes, Ghion Real Estate, Real Estate Ethiopia, Apartments for sale Addis Ababa, Bole Wollo Sefer Property, Luxury Living Ethiopia">
     <meta name="author" content="Ghion Homes">
     <link rel="canonical" href="https://ethioproperty.com/" />
 
     <meta property="og:title" content="Ghion Homes Real Estate - Exclusive Living in Bole">
-    <meta property="og:description" content="Secure your dream apartment in Bole Wollo Sefer with only 10% down payment. Explore our 20,000 sqm luxury compound.">
+    <meta property="og:description" content="Secure your dream home in the heart of Addis Ababa with Ghion Homes.">
     <meta property="og:image" content="photo_2026-04-25_14-27-36.webp">
-    <meta property="og:url" content="https://ethioproperty.com/">
     <meta property="og:type" content="website">
 
     <style>
@@ -26,15 +25,16 @@
         }
 
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
             margin: 0;
             padding-top: 65px; 
-            line-height: 1.5;
+            line-height: 1.6;
             color: #333;
             background-color: var(--gray);
             -webkit-font-smoothing: antialiased;
         }
 
+        /* --- STICKY NAVIGATION --- */
         .header-bar {
             position: fixed;
             top: 0;
@@ -51,125 +51,132 @@
         }
         
         .header-logo {
-            height: 40px;
+            height: 45px;
             width: auto;
         }
 
         .header-call-btn {
             background: var(--accent);
             color: var(--white);
-            padding: 8px 15px;
+            padding: 10px 18px;
             text-decoration: none;
             font-weight: bold;
             border-radius: 5px;
-            font-size: 0.85rem;
+            font-size: 0.9rem;
+            text-transform: uppercase;
         }
 
+        /* --- HERO SECTION --- */
         .hero {
-            background: linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.65)), 
+            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), 
                         url('photo_2026-04-25_14-27-36.webp');
             background-size: cover;
             background-position: center;
             color: var(--white);
-            padding: 100px 20px;
+            padding: 120px 20px;
             text-align: center;
         }
 
-        .hero h1 { font-size: 3rem; margin: 0 0 1rem; }
-        .hero p { font-size: 1.3rem; margin: 0; }
+        .hero h1 { font-size: 3.5rem; margin: 0 0 10px; font-weight: 800; }
+        .hero p { font-size: 1.5rem; margin: 0; opacity: 0.9; }
 
+        /* --- CALL TO ACTION BAR --- */
         .contact-bar { 
             background: var(--white); 
-            padding: 30px; 
-            border-radius: 10px; 
+            padding: 35px; 
+            border-radius: 12px; 
             text-align: center; 
-            max-width: 600px;
-            margin: -40px auto 0;
+            max-width: 650px;
+            margin: -50px auto 0;
             position: relative; 
             z-index: 10; 
-            box-shadow: 0 8px 25px rgba(0,0,0,0.1); 
+            box-shadow: 0 15px 35px rgba(0,0,0,0.15); 
         }
 
-        .btn-group { display: flex; justify-content: center; gap: 10px; flex-wrap: wrap; margin-top: 15px; }
+        .btn-group { display: flex; justify-content: center; gap: 15px; flex-wrap: wrap; margin-top: 20px; }
         
         .btn {
-            padding: 12px 25px;
+            padding: 14px 30px;
             text-decoration: none;
-            font-weight: bold;
-            border-radius: 25px;
+            font-weight: 700;
+            border-radius: 30px;
             color: white;
-            transition: transform 0.2s;
+            transition: all 0.3s ease;
         }
         .btn-red { background: var(--accent); }
+        .btn-red:hover { background: #b02a33; transform: translateY(-2px); }
         .btn-whatsapp { background: var(--whatsapp); }
+        .btn-whatsapp:hover { background: #1da851; transform: translateY(-2px); }
 
-        .container { max-width: 1100px; margin: auto; padding: 40px 20px; }
-        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; }
+        .container { max-width: 1200px; margin: auto; padding: 60px 20px; }
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; }
         
         .card {
             background: var(--white);
-            padding: 25px;
-            border-radius: 8px;
-            border-top: 4px solid var(--primary);
-            box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+            padding: 30px;
+            border-radius: 10px;
+            border-top: 6px solid var(--primary);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            transition: 0.3s;
         }
-        .card h3 { color: var(--accent); margin-top: 0; }
+        .card:hover { transform: translateY(-5px); }
+        .card h3 { color: var(--accent); margin-top: 0; font-size: 1.4rem; }
 
-        .amenities { background: var(--primary); color: var(--white); text-align: center; padding: 50px 20px; }
+        .amenities { background: var(--primary); color: var(--white); text-align: center; padding: 70px 20px; }
         .amenities-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
-            gap: 15px;
-            margin-top: 25px;
+            grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+            gap: 20px;
+            margin-top: 35px;
         }
-        .amenity-item { padding: 10px; background: rgba(255,255,255,0.08); border-radius: 5px; font-size: 0.9rem; }
+        .amenity-item { padding: 15px; background: rgba(255,255,255,0.1); border-radius: 8px; font-weight: 500; }
         
-        footer { background: #111; color: #777; text-align: center; padding: 20px; font-size: 0.8rem; }
+        footer { background: #0a0c1a; color: #aaa; text-align: center; padding: 30px; font-size: 0.9rem; }
 
         @media (max-width: 600px) {
-            .hero h1 { font-size: 2.2rem; }
-            .hero p { font-size: 1.1rem; }
+            .hero h1 { font-size: 2.5rem; }
+            .hero p { font-size: 1.2rem; }
         }
     </style>
 </head>
 <body>
 
 <header class="header-bar">
-    <img src="logo.png" alt="Ghion Homes Real Estate Logo" class="header-logo">
-    <a href="tel:0969098514" class="header-call-btn">CALL: 0969098514</a>
+    <img src="logo.png" alt="Ghion Homes Real Estate Official Logo" class="header-logo">
+    <a href="tel:0969098514" class="header-call-btn">Visit Ghion Homes</a>
 </header>
 
 <section class="hero">
     <div class="container">
         <h1>Ghion Homes Real Estate</h1>
-        <p>Luxury Apartments in the Heart of Bole Wollo Sefer</p>
+        <p>Premium Living in the Heart of Bole Wollo Sefer</p>
     </div>
 </section>
 
 <div class="container">
     <div class="contact-bar">
-        <h3>Visit Ghion Homes Today</h3>
-        <p>Modern Living with only 10% Down Payment.</p>
+        <h2>Start Your Ownership Today</h2>
+        <p>Secure your unit at Ghion Homes with only a 10% down payment.</p>
         <div class="btn-group">
-            <a href="tel:0969098514" class="btn btn-red">☎ CALL 0969098514</a>
-            <a href="https://wa.me/251969098514" class="btn btn-whatsapp">💬 WHATSAPP</a>
+            <a href="tel:0969098514" class="btn btn-red">☎ CALL: 0969098514</a>
+            <a href="https://wa.me/251969098514" class="btn btn-whatsapp">💬 WHATSAPP US</a>
         </div>
     </div>
 
-    <h2 style="text-align: center; margin: 40px 0; color: var(--primary);">Exclusive Property Options</h2>
+    <h2 style="text-align: center; margin: 60px 0 30px; color: var(--primary); font-size: 2.2rem;">Property Portfolios</h2>
     
     <div class="grid">
         <div class="card">
-            <h3>Immediate Handover</h3>
-            <p>95% Complete. Individual Title Deeds (Map) Ready.</p>
+            <h3>Ready for Handover</h3>
+            <p>Immediate occupancy available (95% complete) with individual title deeds.</p>
             <ul>
-                <li>2 Bedroom: 169 sqm</li>
-                <li>3 Bedroom: 201 sqm</li>
+                <li>2 Bedrooms: 169 sqm</li>
+                <li>3 Bedrooms: 201 sqm</li>
             </ul>
         </div>
         <div class="card">
-            <h3>Investment Projects</h3>
-            <p>Delivery timelines ranging from 20% to 85% completion.</p>
+            <h3>Under Construction</h3>
+            <p>Flexible delivery options for long-term investment (20% - 85% completion).</p>
             <ul>
                 <li>1 Bedroom: 94 sqm</li>
                 <li>4 Bedroom: 214 - 216 sqm</li>
@@ -177,10 +184,10 @@
         </div>
         <div class="card">
             <h3>Why Ghion Real Estate?</h3>
-            <p>Secure investment in Addis Ababa's most prime location.</p>
+            <p>Invest in the only 20,000 sqm luxury compound in Bole.</p>
             <ul>
-                <li>20,000 sqm Gated Compound</li>
-                <li>Flexible 2.5 Year Payment Plans</li>
+                <li>2.5 Year Interest-Free Payment Plans</li>
+                <li>Prime Wollo Sefer Location</li>
             </ul>
         </div>
     </div>
@@ -188,22 +195,23 @@
 
 <section class="amenities">
     <div class="container">
-        <h2>Premium Amenities</h2>
+        <h2>Premium Compound Amenities</h2>
         <div class="amenities-grid">
             <div class="amenity-item">🏊 Swimming Pool</div>
             <div class="amenity-item">🏋️ Gym & Spa</div>
-            <div class="amenity-item">🎠 Kids Area</div>
+            <div class="amenity-item">🎠 Kids Playground</div>
             <div class="amenity-item">🛒 Supermarket</div>
             <div class="amenity-item">🚗 Private Parking</div>
             <div class="amenity-item">🌳 Green Spaces</div>
-            <div class="amenity-item">💧 Water Backup</div>
-            <div class="amenity-item">🛗 Modern Lifts</div>
+            <div class="amenity-item">💧 Underground Water</div>
+            <div class="amenity-item">🛗 High-Speed Lifts</div>
         </div>
     </div>
 </section>
 
 <footer>
     <p>&copy; 2026 Ghion Homes Real Estate | Bole Wollo Sefer, Addis Ababa, Ethiopia.</p>
+    <p>#GhionHomes #GhionRealEstate #AddisAbabaProperty</p>
 </footer>
 
 </body>
